@@ -10,4 +10,3 @@ mount /dev/vdb /mnt/rocky-dvd && echo "[OK] Stick montado en /mnt/rocky-dvd"
 dnf config-manager --set-enabled dvd-baseos dvd-appstream
 echo "-------------------------------------------------------"
 dnf repolist
-
