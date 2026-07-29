@@ -5,7 +5,7 @@ openssl req -new -x509 -newkey rsa:2048 -nodes -days 3650 -subj "/CN=Buildlab Ke
 mokutil --import buildlab.der
 
 # Firmar de nuevo el módulo
-/usr/src/kernels/$(uname -r)/scripts/sign-file sha256 buildlab.priv buildlab.der hello.ko
+sudo kmod-sign-file sha256 /etc/secureboot/buildlab.priv /etc/secureboot/buildlab.der hello.ko
 
 # Probar la carga
 sudo insmod hello.ko
