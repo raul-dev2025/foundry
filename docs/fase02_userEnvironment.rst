@@ -70,6 +70,39 @@ Integración y Conectividad SSH / Git
 
         git pull origin main
 
+
+Delegación de Firma y Validación de Módulos (/etc/sudoers.d/builder-kernel)
+============================================================================
+
+Las claves de firma se custodian en ``/etc/secureboot/`` bajo el dominio exclusivo de ``root``. Para permitir que el usuario ``builder`` firme los módulos compilados sin exponer credenciales de superusuario, se expone un enlace simbólico en ``/usr/bin/kmod-sign-file`` y se autoriza en la directiva de ``sudoers``:
+
+1. **Ajuste de Permisos y Enlace:**
+
+   .. code-block:: bash
+
+      chown -R root:root /etc/secureboot
+      chmod 0700 /etc/secureboot
+      chmod 0600 /etc/secureboot/buildlab.priv
+      chmod 0644 /etc/secureboot/buildlab.der
+      ln -s /usr/src/kernels/$(uname -r)/scripts/sign-file /usr/bin/kmod-sign-file
+
+2. **Directiva de Privilegios (/etc/sudoers.d/builder-kernel):**
+
+   .. code-block:: sudoers
+
+      builder ALL=(ALL) NOPASSWD: /usr/sbin/insmod, /usr/sbin/rmmod, /usr/bin/dmesg, /usr/sbin/modinfo, /usr/bin/kmod-sign-file
+
+3. **Ciclo Completo de Firma, Carga y Descarga:**
+
+   .. code-block:: bash
+
+      sudo kmod-sign-file sha256 /etc/secureboot/buildlab.priv /etc/secureboot/buildlab.der hello.ko
+      sudo insmod hello.ko
+      sudo dmesg | tail -n 5
+      sudo rmmod hello
+      sudo dmesg | tail -n 5
+
+
 Estado del Entorno
 ==================
 
