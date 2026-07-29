@@ -19,3 +19,12 @@ Bienvenido a la documentación técnica del entorno de laboratorio **Foundry**.
    fase02_toolchain
    fase03_debugging
    fase04_ltp
+
+
+-----
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tipos de commits:
+
+   commitTypes.rst
