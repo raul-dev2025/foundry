@@ -20,34 +20,34 @@ Herramientas Desplegadas
 ========================
 
 .. list-table:: Herramientas Desplegadas
-:widths: 20 30 50
-:header-rows: 1
+   :widths: 20 30 50
+   :header-rows: 1
 
-* * Herramienta
-* Paquete / Ruta
-* Propósito
-* * GDB
-* `gdb`
-* Depuración estática de binarios y símbolos
-* * perf
-* `perf`
-* Perfilado de eventos del subsistema hardware/kernel
-* * trace-cmd
-* `trace-cmd`
-* Interfaz de usuario para ftrace en espacio kernel
-* * bpftool
-* `bpftool`
-* Inspección y manipulación de mapas/programas eBPF
-* * bcc-tools
-* `/usr/share/bcc/tools/`
-* Colección de scripts de trazado sobre eBPF
+   * - Herramienta
+     - Paquete / Ruta
+     - Propósito
+   * - GDB
+     - `gdb`
+     - Depuración estática de binarios y símbolos
+   * - perf
+     - `perf`
+     - Perfilado de eventos del subsistema hardware/kernel
+   * - trace-cmd
+     - `trace-cmd`
+     - Interfaz de usuario para ftrace en espacio kernel
+   * - bpftool
+     - `bpftool`
+     - Inspección y manipulación de mapas/programas eBPF
+   * - bcc-tools
+     - `/usr/share/bcc/tools/`
+     - Colección de scripts de trazado sobre eBPF
 
 Configuración y Delegación (sudoers)
 =====================================
 
 Para permitir la inspección del núcleo por parte del usuario sin privilegios, se amplían las reglas en ``/etc/sudoers.d/builder-kernel``:
 
-.. code-block:: sudoers
+.. code-block:: bash
 
    builder ALL=(ALL) NOPASSWD: /usr/sbin/insmod, /usr/sbin/rmmod, /usr/bin/dmesg, /usr/sbin/modinfo, /usr/bin/kmod-sign-file, /usr/bin/perf, /usr/bin/trace-cmd, /usr/sbin/bpftool
 

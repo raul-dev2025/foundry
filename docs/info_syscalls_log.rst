@@ -4,65 +4,66 @@ IDcheck script log
 
 Checking for required user/group ids
 
-**'root'** user id and group found.
-**'nobody'** user id and group found.
-**'bin'** user id and group found.
-**'daemon'** user id and group found.
-Users group found.
-Sys group found.
-Required users/groups exist.
-If some fields are empty or look unusual you may have an old version.
-Compare to the current minimal requirements in Documentation/Changes.
+* **'root'** user id and group found.
+* **'nobody'** user id and group found.
+* **'bin'** user id and group found.
+* **'daemon'** user id and group found.
+* Users group found.
+* Sys group found.
+* Required users/groups exist.
+* If some fields are empty or look unusual you may have an old version.
+* Compare to the current minimal requirements in Documentation/Changes.
+* ``/etc/os-release``
+* ``/etc/redhat-release``
+* ``/etc/rocky-release``
+* ``/etc/system-release``
+* **NAME** ="Rocky Linux".
+* **VERSION** ="10.1 (Red Quartz)".
+* **ID** ="rocky".
+* **ID_LIKE** ="rhel centos fedora".
+* **VERSION_ID** ="10.1".
+* **PLATFORM_ID** ="platform:el10".
+* **PRETTY_NAME** ="Rocky Linux 10.1 (Red Quartz)".
+* **ANSI_COLOR** ="0;32".
+* **LOGO** ="fedora-logo-icon".
+* **CPE_NAME** ="cpe:/o:rocky:rocky:10::baseos".
+* **HOME_URL** ="https://rockylinux.org/".
+* **VENDOR_NAME** ="RESF".
+* **VENDOR_URL** ="https://resf.org/".
+* **BUG_REPORT_URL** ="https://bugs.rockylinux.org/".
+* **SUPPORT_END** ="2035-05-31".
+* **ROCKY_SUPPORT_PRODUCT** ="Rocky-Linux-10".
+* **ROCKY_SUPPORT_PRODUCT_VERSION** ="10.1".
+* **REDHAT_SUPPORT_PRODUCT** ="Rocky Linux".
+* **REDHAT_SUPPORT_PRODUCT_VERSION** ="10.1".
+* *Rocky Linux release 10.1 (Red Quartz)*.
 
-``/etc/os-release``
-``/etc/redhat-release``
-``/etc/rocky-release``
-``/etc/system-release``
-**NAME**="Rocky Linux"
-**VERSION**="10.1 (Red Quartz)"
-**ID**="rocky"
-**ID_LIKE**="rhel centos fedora"
-**VERSION_ID**="10.1"
-**PLATFORM_ID**="platform:el10"
-**PRETTY_NAME**="Rocky Linux 10.1 (Red Quartz)"
-**ANSI_COLOR**="0;32"
-**LOGO**="fedora-logo-icon"
-**CPE_NAME**="cpe:/o:rocky:rocky:10::baseos"
-**HOME_URL**="https://rockylinux.org/"
-**VENDOR_NAME**="RESF"
-**VENDOR_URL**="https://resf.org/"
-**BUG_REPORT_URL**="https://bugs.rockylinux.org/"
-**SUPPORT_END**="2035-05-31"
-**ROCKY_SUPPORT_PRODUCT**="Rocky-Linux-10"
-**ROCKY_SUPPORT_PRODUCT_VERSION**="10.1"
-**REDHAT_SUPPORT_PRODUCT**="Rocky Linux"
-**REDHAT_SUPPORT_PRODUCT_VERSION**="10.1"
-*Rocky Linux release 10.1 (Red Quartz)*  
-*Rocky Linux release 10.1 (Red Quartz)*  
-*Rocky Linux release 10.1 (Red Quartz)*  
+* **uname:** Linux buildlab.raulvilchez.org 6.12.0-124.8.1.el10_1.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Nov 11 22:54:28 UTC 2025 x86_64 GNU/Linux
 
-**uname:**
-Linux buildlab.raulvilchez.org 6.12.0-124.8.1.el10_1.x86_64 #1 SMP PREEMPT_DYNAMIC Tue Nov 11 22:54:28 UTC 2025 x86_64 GNU/Linux
+* ``/proc/cmdline``
 
-``/proc/cmdline``
-**BOOT_IMAGE**=(hd0,gpt2)/vmlinuz-6.12.0-124.8.1.el10_1.x86_64 **root=UUID**=f9e06a5b-396a-4ba1-9861-62087e95aed2 ro crashkernel=2G-64G:256M,64G-:512M **resume=UUID**=452eef98-774f-43af-9351-d9eef341f41d console=ttyS0,115200n8
+**BOOT_IMAGE** =(hd0,gpt2)/vmlinuz-6.12.0-124.8.1.el10_1.x86_64 **root=UUID** =f9e06a5b-396a-4ba1-9861-62087e95aed2 ro crashkernel=2G-64G:256M,64G-:512M **resume=UUID** =452eef98-774f-43af-9351-d9eef341f41d console=ttyS0,115200n8
 
-Gnu C                  gcc (GCC) 14.3.1 20250617 (Red Hat 14.3.1-2)
-Clang                 
-Gnu make               4.4.1
-util-linux             2.40.2
-mount                  util-linux 2.40.2 (libmount 2.40.2: selinux, btrfs, namespaces, idmapping, fd-based-mount, statx, assert, debug)
-modutils               31
-e2fsprogs              1.47.1
-vfat                   4.2
-xfs                    6.11.0
-Linux C Library        GNU C Library (GNU libc) stable release version 2.39.
-Dynamic linker (ldd)   2.39
-Procps                 4.0.4
-iproute2               1.6.0
-iputils                20240905
-ethtool                6.15
-Sh-utils               9.5
+.. code-block:: bash
+
+   Gnu C                  gcc (GCC) 14.3.1 20250617 (Red Hat 14.3.1-2)
+   Clang                 
+   Gnu make               4.4.1
+   util-linux             2.40.2
+   mount                  util-linux 2.40.2 (libmount 2.40.2: selinux, btrfs, namespaces, idmapping, fd-based-mount, statx, assert, debug)
+   modutils               31
+   e2fsprogs              1.47.1
+   vfat                   4.2
+   xfs                    6.11.0
+   Linux C Library        GNU C Library (GNU libc) stable release version 2.39.
+   Dynamic linker (ldd)   2.39
+   Procps                 4.0.4
+   iproute2               1.6.0
+   iputils                20240905
+   ethtool                6.15
+   Sh-utils               9.5
+
+
 
 1. Virtualización e Infraestructura de Hypervisor.
 ==================================================
@@ -182,8 +183,8 @@ Análisis de usuario, de los módulos cargados en el kernel
    
    Este bloque garantiza que todas las operaciones de I/O sobre XFS y las conexiones seguras (como la propia sesión SSH o la sincronización Git con los remotos) tengan el menor overhead posible. En las pruebas de LTP, estos módulos aseguran que los test de stress de almacenamiento y red evalúen el rendimiento real del kernel y no cuellos de botella por cómputo de sumas de verificación por software.  
    
-6: Servicios de Red del Kernel y Capas de Abstracción (NFS, FUSE, Loopback)
-===========================================================================
+6: Servicios de Red del Kernel y Capas de Abstracción (NFS, FUSE)
+=================================================================
 
 Modules Loaded 
 
@@ -202,54 +203,56 @@ Modules Loaded
 
 -----
 
-Llista completa, tal como la muestra "IDcheck.sh"
+*Llista completa, tal como la muestra "IDcheck.sh"*
 
-Modules Loaded         rfkill nft_fib_inet nft_fib_ipv4 nft_fib_ipv6 nft_fib nft_reject_inet nf_reject_ipv4 nf_reject_ipv6 nft_reject nft_ct nft_chain_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 nf_tables vfat fat intel_rapl_msr intel_rapl_common kvm_amd ccp kvm iTCO_wdt iTCO_vendor_support i2c_i801 irqbypass pcspkr bochs i2c_smbus virtio_balloon lpc_ich joydev auth_rpcgss sunrpc fuse loop nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci xfs ahci libahci crct10dif_pclmul crc32_pclmul libata crc32c_intel virtio_net ghash_clmulni_intel net_failover virtio_blk failover virtio_console serio_raw dm_mirror dm_region_hash dm_log dm_mod
+.. code-block:: bash
 
-==============================================================================================
+   Modules Loaded         rfkill nft_fib_inet nft_fib_ipv4 nft_fib_ipv6 nft_fib nft_reject_inet nf_reject_ipv4 nf_reject_ipv6 nft_reject nft_ct nft_chain_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 nf_tables vfat fat intel_rapl_msr intel_rapl_common kvm_amd ccp kvm iTCO_wdt iTCO_vendor_support i2c_i801 irqbypass pcspkr bochs i2c_smbus virtio_balloon lpc_ich joydev auth_rpcgss sunrpc fuse loop nfnetlink vsock_loopback vmw_vsock_virtio_transport_common vmw_vsock_vmci_transport vsock vmw_vmci xfs ahci libahci crct10dif_pclmul crc32_pclmul libata crc32c_intel virtio_net ghash_clmulni_intel net_failover virtio_blk failover virtio_console serio_raw dm_mirror dm_region_hash dm_log dm_mod
 
-**cpuinfo:**
-**Architecture:**                            x86_64
-**CPU op-mode(s):**                          32-bit, 64-bit
-**Address sizes:**                           48 bits physical, 48 bits virtual
-**Byte Order:**                              Little Endian
-**CPU(s):**                                  4
-**On-line CPU(s) list:**                     0-3
-**Vendor ID:**                               AuthenticAMD
-**Model name:**                              AMD Ryzen 5 5600 6-Core Processor
-**CPU family:**                              25
-**Model:**                                   33
-**Thread(s) per core:**                      2
-**Core(s) per socket:**                      2
-**Socket(s):**                               1
-**Stepping:**                                2
-**BogoMIPS:**                                6986.87
-**Flags:**                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor fsrm arch_capabilities
-**Virtualization:**                          AMD-V
-**Hypervisor vendor:**                       KVM
-**Virtualization type:**                     full
-**L1d cache:**                               64 KiB (2 instances)
-**L1i cache:**                               64 KiB (2 instances)
-**L2 cache:**                                1 MiB (2 instances)
-**L3 cache:**                                32 MiB (1 instance)
-**NUMA node(s):**                            1
-**NUMA node0 CPU(s):**                       0-3
-**Vulnerability Gather data sampling:**      Not affected
-**Vulnerability Indirect target selection:** Not affected
-**Vulnerability Itlb multihit:**             Not affected
-**Vulnerability L1tf:**                      Not affected
-**Vulnerability Mds:**                       Not affected
-**Vulnerability Meltdown:**                  Not affected
-**Vulnerability Mmio stale data:**           Not affected
-**Vulnerability Reg file data sampling:**    Not affected
-**Vulnerability Retbleed:**                  Not affected
-**Vulnerability Spec rstack overflow:**      Mitigation; Safe RET
-**Vulnerability Spec store bypass:**         Mitigation; Speculative Store Bypass disabled via prctl
-**Vulnerability Spectre v1:**                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
-**Vulnerability Spectre v2:**                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
-**Vulnerability Srbds:**                     Not affected
-**Vulnerability Tsa:**                       Vulnerable: No microcode
-**Vulnerability Tsx async abort:**           Not affected
+
+
+* **cpuinfo:**
+* **Architecture:**                            x86_64
+* **CPU op-mode(s):**                          32-bit, 64-bit
+* **Address sizes:**                           48 bits physical, 48 bits virtual
+* **Byte Order:**                              Little Endian
+* **CPU(s):**                                  4
+* **On-line CPU(s) list:**                     0-3
+* **Vendor ID:**                               AuthenticAMD
+* **Model name:**                              AMD Ryzen 5 5600 6-Core Processor
+* **CPU family:**                              25
+* **Model:**                                   33
+* **Thread(s) per core:**                      2
+* **Core(s) per socket:**                      2
+* **Socket(s):**                               1
+* **Stepping:**                                2
+* **BogoMIPS:**                                6986.87
+* **Flags:**                                   ``fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl xtopology cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt lbrv nrip_save tsc_scale vmcb_clean flushbyasid pausefilter pfthreshold v_vmsave_vmload vgif umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor fsrm arch_capabilities``
+* **Virtualization:**                          AMD-V
+* **Hypervisor vendor:**                       KVM
+* **Virtualization type:**                     full
+* **L1d cache:**                               64 KiB (2 instances)
+* **L1i cache:**                               64 KiB (2 instances)
+* **L2 cache:**                                1 MiB (2 instances)
+* **L3 cache:**                                32 MiB (1 instance)
+* **NUMA node(s):**                            1
+* **NUMA node0 CPU(s):**                       0-3
+* **Vulnerability Gather data sampling:**      Not affected
+* **Vulnerability Indirect target selection:** Not affected
+* **Vulnerability Itlb multihit:**             Not affected
+* **Vulnerability L1tf:**                      Not affected
+* **Vulnerability Mds:**                       Not affected
+* **Vulnerability Meltdown:**                  Not affected
+* **Vulnerability Mmio stale data:**           Not affected
+* **Vulnerability Reg file data sampling:**    Not affected
+* **Vulnerability Retbleed:**                  Not affected
+* **Vulnerability Spec rstack overflow:**      Mitigation; Safe RET
+* **Vulnerability Spec store bypass:**         Mitigation; Speculative Store Bypass disabled via prctl
+* **Vulnerability Spectre v1:**                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+* **Vulnerability Spectre v2:**                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+* **Vulnerability Srbds:**                     Not affected
+* **Vulnerability Tsa:**                       Vulnerable: No microcode
+* **Vulnerability Tsx async abort:**           Not affected
 
 .. list-table:: Reporte de Memoria (free)
    :header-rows: 1
@@ -280,64 +283,64 @@ Modules Loaded         rfkill nft_fib_inet nft_fib_ipv4 nft_fib_ipv6 nft_fib nft
 memory (/proc/meminfo):
 -----------------------
 
-**MemTotal:**       11959840 kB
-**MemFree:**         8002812 kB
-**MemAvailable:**   11355900 kB
-**Buffers:**            3752 kB
-**Cached:**          3582324 kB
-**SwapCached:**            0 kB
-**Active:**           359596 kB
-**Inactive:**        3330920 kB
-**Active(anon):**     125416 kB
-**Inactive(anon):**        0 kB
-**Active(file):**     234180 kB
-**Inactive(file):**  3330920 kB
-**Unevictable:**        4000 kB
-**Mlocked:**               0 kB
-**SwapTotal:**       2097148 kB
-**SwapFree:**        2097148 kB
-**Zswap:**                 0 kB
-**Zswapped:**              0 kB
-**Dirty:**                60 kB
-**Writeback:**             0 kB
-**AnonPages:**        108268 kB
-**Mapped:**            91720 kB
-**Shmem:**             21064 kB
-**KReclaimable:**      58512 kB
-**Slab:**             125340 kB
-**SReclaimable:**      58512 kB
-**SUnreclaim:**        66828 kB
-**KernelStack:**        3352 kB
-**PageTables:**         3780 kB
-**SecPageTables:**         0 kB
-**NFS_Unstable:**          0 kB
-**Bounce:**                0 kB
-**WritebackTmp:**          0 kB
-**CommitLimit:**     8077068 kB
-**Committed_AS:**     337544 kB
-**VmallocTotal:**   34359738367 kB
-**VmallocUsed:**       19388 kB
-**VmallocChunk:**          0 kB
-**Percpu:**             1616 kB
-**HardwareCorrupted:**     0 kB
-**AnonHugePages:**     26624 kB
-**ShmemHugePages:**        0 kB
-**ShmemPmdMapped:**        0 kB
-**FileHugePages:**         0 kB
-**FilePmdMapped:**         0 kB
-**CmaTotal:**              0 kB
-**CmaFree:**               0 kB
-**Unaccepted:**            0 kB
-**Balloon:**               0 kB
-**HugePages_Total:**       0
-**HugePages_Free:**        0
-**HugePages_Rsvd:**        0
-**HugePages_Surp:**        0
-**Hugepagesize:**       2048 kB
-**Hugetlb:**               0 kB
-**DirectMap4k:**      121716 kB
-**DirectMap2M:**     4052992 kB
-**DirectMap1G:**    10485760 kB
+* **MemTotal:**       11959840 kB
+* **MemFree:**         8002812 kB
+* **MemAvailable:**   11355900 kB
+* **Buffers:**            3752 kB
+* **Cached:**          3582324 kB
+* **SwapCached:**            0 kB
+* **Active:**           359596 kB
+* **Inactive:**        3330920 kB
+* **Active(anon):**     125416 kB
+* **Inactive(anon):**        0 kB
+* **Active(file):**     234180 kB
+* **Inactive(file):**  3330920 kB
+* **Unevictable:**        4000 kB
+* **Mlocked:**               0 kB
+* **SwapTotal:**       2097148 kB
+* **SwapFree:**        2097148 kB
+* **Zswap:**                 0 kB
+* **Zswapped:**              0 kB
+* **Dirty:**                60 kB
+* **Writeback:**             0 kB
+* **AnonPages:**        108268 kB
+* **Mapped:**            91720 kB
+* **Shmem:**             21064 kB
+* **KReclaimable:**      58512 kB
+* **Slab:**             125340 kB
+* **SReclaimable:**      58512 kB
+* **SUnreclaim:**        66828 kB
+* **KernelStack:**        3352 kB
+* **PageTables:**         3780 kB
+* **SecPageTables:**         0 kB
+* **NFS_Unstable:**          0 kB
+* **Bounce:**                0 kB
+* **WritebackTmp:**          0 kB
+* **CommitLimit:**     8077068 kB
+* **Committed_AS:**     337544 kB
+* **VmallocTotal:**   34359738367 kB
+* **VmallocUsed:**       19388 kB
+* **VmallocChunk:**          0 kB
+* **Percpu:**             1616 kB
+* **HardwareCorrupted:**     0 kB
+* **AnonHugePages:**     26624 kB
+* **ShmemHugePages:**        0 kB
+* **ShmemPmdMapped:**        0 kB
+* **FileHugePages:**         0 kB
+* **FilePmdMapped:**         0 kB
+* **CmaTotal:**              0 kB
+* **CmaFree:**               0 kB
+* **Unaccepted:**            0 kB
+* **Balloon:**               0 kB
+* **HugePages_Total:**       0
+* **HugePages_Free:**        0
+* **HugePages_Rsvd:**        0
+* **HugePages_Surp:**        0
+* **Hugepagesize:**       2048 kB
+* **Hugetlb:**               0 kB
+* **DirectMap4k:**      121716 kB
+* **DirectMap2M:**     4052992 kB
+* **DirectMap1G:**    10485760 kB
 
 available filesystems:
 ----------------------
@@ -347,86 +350,92 @@ autofs bdev bpf cgroup cgroup2 configfs cpuset debugfs devpts devtmpfs efivarfs 
 mounted filesystems (/proc/mounts):
 -----------------------------------
 
-/dev/vda4 / xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
-devtmpfs /dev devtmpfs rw,seclabel,nosuid,size=5959520k,nr_inodes=1489880,mode=755,inode64 0 0
-tmpfs /dev/shm tmpfs rw,seclabel,nosuid,nodev,inode64 0 0
-devpts /dev/pts devpts rw,seclabel,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
-sysfs /sys sysfs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
-securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
-cgroup2 /sys/fs/cgroup cgroup2 rw,seclabel,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
-pstore /sys/fs/pstore pstore rw,seclabel,nosuid,nodev,noexec,relatime 0 0
-efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
-bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
-configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
-proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
-tmpfs /run tmpfs rw,seclabel,nosuid,nodev,size=2391968k,nr_inodes=819200,mode=755,inode64 0 0
-selinuxfs /sys/fs/selinux selinuxfs rw,nosuid,noexec,relatime 0 0
-systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=35,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=5479 0 0
-mqueue /dev/mqueue mqueue rw,seclabel,nosuid,nodev,noexec,relatime 0 0
-hugetlbfs /dev/hugepages hugetlbfs rw,seclabel,nosuid,nodev,relatime,pagesize=2M 0 0
-debugfs /sys/kernel/debug debugfs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
-tracefs /sys/kernel/tracing tracefs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
-tmpfs /run/credentials/systemd-journald.service tmpfs ro,seclabel,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
-fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
-/dev/vda2 /boot xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
-/dev/vdc1 /mnt/build-output xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
-/dev/vdb1 /var/log xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
-/dev/vda1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro 0 0
-sunrpc /var/lib/nfs/rpc_pipefs rpc_pipefs rw,relatime 0 0
-tmpfs /run/credentials/serial-getty@ttyS0.service tmpfs ro,seclabel,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
-tmpfs /run/credentials/getty@tty1.service tmpfs ro,seclabel,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
-tmpfs /run/user/1001 tmpfs rw,seclabel,nosuid,nodev,relatime,size=1195984k,nr_inodes=298996,mode=700,uid=1001,gid=1001,inode64 0 0
+.. code-block:: bash
+
+   /dev/vda4 / xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
+   devtmpfs /dev devtmpfs rw,seclabel,nosuid,size=5959520k,nr_inodes=1489880,mode=755,inode64 0 0
+   tmpfs /dev/shm tmpfs rw,seclabel,nosuid,nodev,inode64 0 0
+   devpts /dev/pts devpts rw,seclabel,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+   sysfs /sys sysfs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
+   securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+   cgroup2 /sys/fs/cgroup cgroup2 rw,seclabel,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot 0 0
+   pstore /sys/fs/pstore pstore rw,seclabel,nosuid,nodev,noexec,relatime 0 0
+   efivarfs /sys/firmware/efi/efivars efivarfs rw,nosuid,nodev,noexec,relatime 0 0
+   bpf /sys/fs/bpf bpf rw,nosuid,nodev,noexec,relatime,mode=700 0 0
+   configfs /sys/kernel/config configfs rw,nosuid,nodev,noexec,relatime 0 0
+   proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+   tmpfs /run tmpfs rw,seclabel,nosuid,nodev,size=2391968k,nr_inodes=819200,mode=755,inode64 0 0
+   selinuxfs /sys/fs/selinux selinuxfs rw,nosuid,noexec,relatime 0 0
+   systemd-1 /proc/sys/fs/binfmt_misc autofs rw,relatime,fd=35,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=5479 0 0
+   mqueue /dev/mqueue mqueue rw,seclabel,nosuid,nodev,noexec,relatime 0 0
+   hugetlbfs /dev/hugepages hugetlbfs rw,seclabel,nosuid,nodev,relatime,pagesize=2M 0 0
+   debugfs /sys/kernel/debug debugfs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
+   tracefs /sys/kernel/tracing tracefs rw,seclabel,nosuid,nodev,noexec,relatime 0 0
+   tmpfs /run/credentials/systemd-journald.service tmpfs ro,seclabel,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
+   fusectl /sys/fs/fuse/connections fusectl rw,nosuid,nodev,noexec,relatime 0 0
+   /dev/vda2 /boot xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
+   /dev/vdc1 /mnt/build-output xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
+   /dev/vdb1 /var/log xfs rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota 0 0
+   /dev/vda1 /boot/efi vfat rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro 0 0
+   sunrpc /var/lib/nfs/rpc_pipefs rpc_pipefs rw,relatime 0 0
+   tmpfs /run/credentials/serial-getty@ttyS0.service tmpfs ro,seclabel,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
+   tmpfs /run/credentials/getty@tty1.service tmpfs ro,seclabel,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap 0 0
+   tmpfs /run/user/1001 tmpfs rw,seclabel,nosuid,nodev,relatime,size=1195984k,nr_inodes=298996,mode=700,uid=1001,gid=1001,inode64 0 0
+
+
+
+
+
 
 mounted filesystems (df):
 -------------------------
 
-Filesystem     Type      Size  Used Avail Use% Mounted on
-/dev/vda4      xfs        17G  4.2G   13G  26% /
-devtmpfs       devtmpfs  5.7G     0  5.7G   0% /dev
-tmpfs          tmpfs     5.8G     0  5.8G   0% /dev/shm
-efivarfs       efivarfs  256K  175K   77K  70% /sys/firmware/efi/efivars
-tmpfs          tmpfs     2.3G   17M  2.3G   1% /run
-tmpfs          tmpfs     1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
-/dev/vda2      xfs       960M  224M  737M  24% /boot
-/dev/vdc1      xfs       5.0G  1.8G  3.2G  36% /mnt/build-output
-/dev/vdb1      xfs       5.0G  210M  4.8G   5% /var/log
-/dev/vda1      vfat      599M  8.4M  591M   2% /boot/efi
-tmpfs          tmpfs     1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
-tmpfs          tmpfs     1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
-tmpfs          tmpfs     1.2G  4.0K  1.2G   1% /run/user/1001
+.. code-block:: bash
 
-**tainted (/proc/sys/kernel/tainted):**
-0
+   Filesystem     Type      Size  Used Avail Use% Mounted on
+   /dev/vda4      xfs        17G  4.2G   13G  26% /
+   devtmpfs       devtmpfs  5.7G     0  5.7G   0% /dev
+   tmpfs          tmpfs     5.8G     0  5.8G   0% /dev/shm
+   efivarfs       efivarfs  256K  175K   77K  70% /sys/firmware/efi/efivars
+   tmpfs          tmpfs     2.3G   17M  2.3G   1% /run
+   tmpfs          tmpfs     1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+   /dev/vda2      xfs       960M  224M  737M  24% /boot
+   /dev/vdc1      xfs       5.0G  1.8G  3.2G  36% /mnt/build-output
+   /dev/vdb1      xfs       5.0G  210M  4.8G   5% /var/log
+   /dev/vda1      vfat      599M  8.4M  591M   2% /boot/efi
+   tmpfs          tmpfs     1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+   tmpfs          tmpfs     1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+   tmpfs          tmpfs     1.2G  4.0K  1.2G   1% /run/user/1001
 
-``AppArmor disabled``
-
-**SELinux status:**                 enabled
-**SELinuxfs mount:**                /sys/fs/selinux
-**SELinux root directory:**         /etc/selinux
-**Loaded policy name:**             targeted
-**Current mode:**                   enforcing
-**Mode from config file:**          enforcing
-**Policy MLS status:**              enabled
-**Policy deny_unknown status:**     allowed
-**Memory protection checking:**     actual (secure)
-**Max kernel policy version:**      33
-*no big block device was specified on commandline.*
-*Tests which require a big block device are disabled.*
-*You can specify it with option -z*
-**COMMAND:**    /opt/ltp/bin/ltp-pan   -e -S   -a 56610     -n 56610 -p -f /tmp/ltp-V39duZpHWB/alltests -l /opt/ltp/results/LTP_RUN_ON-2026_07_30-17h_32m_32s.log  -C /opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.failed -T /opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.tconf
-**INFO:** Restricted to sysconf
-**LOG File:** /opt/ltp/results/LTP_RUN_ON-2026_07_30-17h_32m_32s.log
-**FAILED COMMAND File:** /opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.failed
-**TCONF COMMAND File:** /opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.tconf
-``Running tests.......``
-*<<<test_start>>>*
-**tag**=sysconf01 stime=1785425553
-**cmdline**="sysconf01"
-**contacts**=""
-**analysis**=exit
-*<<<test_output>>>*
-**INFO:** ltp-pan reported some tests FAIL
-**LTP Version:** 20250130
+* **tainted (/proc/sys/kernel/tainted):** 0
+* ``AppArmor disabled``
+* **SELinux status:**                 enabled
+* **SELinuxfs mount:**                /sys/fs/selinux
+* **SELinux root directory:**         /etc/selinux
+* **Loaded policy name:**             targeted
+* **Current mode:**                   enforcing
+* **Mode from config file:**          enforcing
+* **Policy MLS status:**              enabled
+* **Policy deny_unknown status:**     allowed
+* **Memory protection checking:**     actual (secure)
+* **Max kernel policy version:**      33
+* *no big block device was specified on commandline.*
+* *Tests which require a big block device are disabled.*
+* *You can specify it with option -z*
+* **COMMAND:** ``/opt/ltp/bin/ltp-pan   -e -S   -a 56610     -n 56610 -p -f /tmp/ltp-V39duZpHWB/alltests -l /opt/ltp/results/LTP_RUN_ON-2026_07_30-17h_32m_32s.log  -C /opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.failed -T /opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.tconf``
+* **INFO:** Restricted to sysconf
+* **LOG File:** ``/opt/ltp/results/LTP_RUN_ON-2026_07_30-17h_32m_32s.log``
+* **FAILED COMMAND File:** ``/opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.failed``
+* **TCONF COMMAND File:** ``/opt/ltp/output/LTP_RUN_ON-2026_07_30-17h_32m_32s.tconf``
+* ``Running tests.......``
+* *<<<test_start>>>*
+* **tag** =sysconf01 stime=1785425553
+* **cmdline** ="sysconf01"
+* **contacts** =" "
+* **analysis** =exit
+* *<<<test_output>>>*
+* **INFO:** ltp-pan reported some tests FAIL
+* **LTP Version:** 20250130
 
 .. code-block:: bash
 

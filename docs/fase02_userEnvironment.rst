@@ -31,7 +31,7 @@ Configuración del Usuario de Compilación
 2. **Delegación de Privilegios para Operaciones del Núcleo:**
    Para permitir la prueba e inspección de controladores sin conceder acceso ``root`` completo, se parametriza la directiva en ``/etc/sudoers.d/builder-kernel``:
 
-   .. code-block:: sudoers
+   .. code-block:: bash
 
       builder ALL=(ALL) NOPASSWD: /usr/sbin/insmod, /usr/sbin/rmmod, /usr/bin/dmesg, /usr/sbin/modinfo
 
@@ -88,7 +88,7 @@ Las claves de firma se custodian en ``/etc/secureboot/`` bajo el dominio exclusi
 
 2. **Directiva de Privilegios (/etc/sudoers.d/builder-kernel):**
 
-   .. code-block:: sudoers
+   .. code-block:: bash
 
       builder ALL=(ALL) NOPASSWD: /usr/sbin/insmod, /usr/sbin/rmmod, /usr/bin/dmesg, /usr/sbin/modinfo, /usr/bin/kmod-sign-file
 
