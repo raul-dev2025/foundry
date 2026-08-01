@@ -21,7 +21,7 @@ static void cleanup(void) {
 }
 
 /* 3. Lógica principal de la prueba */
-static void run(void) {
+static void run(unsigned int i) {
   addr = mmap(NULL, page_sz, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 
   if (addr == MAP_FAILED){
