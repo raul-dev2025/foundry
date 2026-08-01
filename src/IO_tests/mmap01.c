@@ -41,7 +41,7 @@ static void run(unsigned int i) {
 }
 
 static struct tst_test test = {
-  .test_variations = 1,
+  .test_variants = 1,
   .setup = setup,
   .cleanup = cleanup,
   .test = run,
