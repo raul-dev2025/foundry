@@ -19,6 +19,7 @@ Bienvenido a la documentación técnica del entorno de laboratorio **Foundry**.
    fase02_userEnvironment
    fase03_debugging
    fase04_ltp
+   fase05_ci
 
 .. toctree::
    :maxdepth: 1

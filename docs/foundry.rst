@@ -59,3 +59,12 @@ Fases de Ejecución
    * Preparación de dependencias para el suite LTP.
    * Compilación e instalación en entorno aislado (`/opt/ltp`).
    * Marcado de **GOLDEN-03**.
+
+6. **Fase 5: Integración Continua (CI) Local / Orientada a Desarrollo**
+
+   * Diseño del flujo de trabajo automatizado sin sesión interactiva en el laboratorio (WS a Lab).
+   * Sincronización y transporte de cambios vía control de versiones o canales de transporte remotos.
+   * Invocación remota del proceso de compilación (`make`) y captura segregada de la salida (`stdout` / `stderr`).
+   * Evaluación condicional de la compilación y ejecución automatizada de binarios de prueba basados en LTP.
+   * Centralización, estructuración y persistencia de logs de compilación y ejecución en la estación de trabajo.
+   * Marcado de **GOLDEN-04**.
