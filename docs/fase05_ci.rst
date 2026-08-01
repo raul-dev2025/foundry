@@ -1,6 +1,6 @@
-======================================================
-Integración Continua (CI) Local / Orientada a Desarrollo
-======================================================
+========================================================
+Fase 5: Integración Continua (CI) Orientada a Desarrollo
+========================================================
 
 .. contents:: Tabla de Contenidos
    :depth: 2
