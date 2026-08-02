@@ -13,7 +13,7 @@ REMOTE_SRC_DIR="${REMOTE_ROOT}/src/${MODULE_SUBDIR}"  # Directorio del Makefile 
 REMOTE_BIN="${REMOTE_SRC_DIR}/mmap01"                # Binario específico de LTP
 
 # Rutas de logs (WS y Lab)
-LOCAL_LOG_DIR="/var/log/Buildlab/foundry"
+LOCAL_LOG_DIR="/mnt/datos_raul/Logs/Buildlab/foundry"
 REMOTE_LOG_DIR="/var/log/BuilderLogs/foundry"
 
 LOCAL_BUILD_LOG="${LOCAL_LOG_DIR}/build_latest.log"
