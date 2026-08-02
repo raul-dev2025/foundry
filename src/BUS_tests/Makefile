@@ -4,7 +4,12 @@ CFLAGS += -Wall -I$(LTP_SRC)/include -I$(LTP_SRC)/include/old
 LDFLAGS += -L$(LTP_SRC)/lib
 LDLIBS += -lltp
 
+.PHONY: all clean
+
 all: pci_config01
+
+pci_config01: pci_config_test.c
+	$(CC) $(CFLAGS) $(LDFLAGS) $< $(LDLIBS) -o $@
 
 clean:
 	rm -f pci_config01 *.o
