@@ -8,18 +8,18 @@ Bienvenido a la documentación técnica del entorno de laboratorio **Foundry**.
    :maxdepth: 2
    :caption: Contenidos Principales:
 
-   foundry
-   fase00_base_os
+   /EntornoLTP/foundry
+   /EntornoLTP/fase00_base_os
 
 .. toctree::
    :maxdepth: 1
    :caption: Implementación del entorno LTP:
 
-   fase01_toolchain
-   fase02_userEnvironment
-   fase03_debugging
-   fase04_ltp
-   fase05_ci
+   /EntornoLTP/fase01_toolchain
+   /EntornoLTP/fase02_userEnvironment
+   /EntornoLTP/fase03_debugging
+   /EntornoLTP/fase04_ltp
+   /EntornoLTP/fase05_ci
 
 .. toctree::
    :maxdepth: 1
@@ -31,7 +31,7 @@ Bienvenido a la documentación técnica del entorno de laboratorio **Foundry**.
    :maxdepth: 1
    :caption: Logs de estudio:
 
-   info_syscalls_log.rst
+   /EntornoLTP/info_syscalls_log.rst
 
 -----
 
