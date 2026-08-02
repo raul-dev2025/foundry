@@ -8,9 +8,9 @@ set -e
 # Configuración de entornos y rutas
 REMOTE_HOST="builder@buildlab"
 REMOTE_ROOT="/mnt/build-output/Repos/foundry"
-MODULE_SUBDIR="IO_tests"                             # Módulo a probar
+MODULE_SUBDIR="BUS_tests"                             # Módulo a probar
 REMOTE_SRC_DIR="${REMOTE_ROOT}/src/${MODULE_SUBDIR}"  # Directorio del Makefile modular
-REMOTE_BIN="${REMOTE_SRC_DIR}/mmap01"                # Binario específico de LTP
+REMOTE_BIN="${REMOTE_SRC_DIR}/pci_config01"                # Binario específico de LTP
 
 # Rutas de logs (WS y Lab)
 LOCAL_LOG_DIR="/mnt/datos_raul/Logs/Buildlab/foundry"
