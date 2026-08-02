@@ -70,5 +70,5 @@ static void run(void)
 
 static struct tst_test test = {
 	.test_all = run,
-	.needs_root = 1,
+	//.needs_root = 1,
 };
