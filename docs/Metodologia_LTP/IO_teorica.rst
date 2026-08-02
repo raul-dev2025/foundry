@@ -34,20 +34,20 @@ de usuario mediante un entero no negativo denominado **File Descriptor (FD)**.
 La llamada al sistema ``mmap()`` permite proyectar un archivo o un dispositivo físico 
 directamente en el espacio de direcciones virtuales del proceso invocador.
 
-* **Ventajas frente a ``read``/``write``**:
+* **Ventajas frente a** ``read`` / ``write``:
 
   Evita la doble copia de datos entre el buffer del espacio de kernel (page cache) 
   y el buffer de espacio de usuario, reduciendo drásticamente la carga sobre la CPU.
 
 * **Tipos de Mapeo**:
   
-  - **``MAP_SHARED``**: Los cambios en la memoria son visibles por otros procesos 
+  - ``MAP_SHARED``: Los cambios en la memoria son visibles por otros procesos 
     que mapeen el mismo recurso y se escriben eventualmente en el dispositivo subyacente.
-  - **``MAP_PRIVATE``**: Crea un mapeo de *Copia en Escritura* (Copy-On-Write / COW). 
+  - ``MAP_PRIVATE``: Crea un mapeo de *Copia en Escritura* (Copy-On-Write / COW). 
     Los cambios no son visibles para otros procesos ni afectan al recurso físico.
 
-3. Control de Dispositivos E/S (``ioctl``)
-------------------------------------------
+3. Control de Dispositivos E/S ``ioctl``
+----------------------------------------
 
 Mientras que ``read()`` y ``write()`` gestionan el flujo plano de datos, ``ioctl()`` 
 (Input/Output Control) es la "navaja suiza" de los syscalls para la comunicación 
@@ -166,8 +166,8 @@ Estructuras Internas de VFS (``file_operations``, ``file`` e ``inode``)
 
 Cuando una syscall como ``mmap()`` o ``ioctl()`` se invoca, el kernel navega a través de tres estructuras fundamentales:
 
-1. **``struct inode``**: Representa el fichero o nodo de dispositivo físico en el sistema (contiene número de dispositivo ``i_rdev``, punteros a cdev, etc.).
-2. **``struct file``**: Representa una instancia de un fichero abierto por un proceso (contiene la posición del cursor ``f_pos``, flags ``f_flags`` y el puntero ``f_op``).
-3. **``struct file_operations``**: Tabla de callbacks que implementa las operaciones reales del driver/sistema de archivos (``read``, ``write``, ``mmap``, ``ioctl``, ``poll``, ``release``).
+1. ``struct inode``: Representa el fichero o nodo de dispositivo físico en el sistema (contiene número de dispositivo ``i_rdev``, punteros a cdev, etc.).
+2. ``struct file``: Representa una instancia de un fichero abierto por un proceso (contiene la posición del cursor ``f_pos``, flags ``f_flags`` y el puntero ``f_op``).
+3. ``struct file_operations``: Tabla de callbacks que implementa las operaciones reales del driver/sistema de archivos (``read``, ``write``, ``mmap``, ``ioctl``, ``poll``, ``release``).
 
 

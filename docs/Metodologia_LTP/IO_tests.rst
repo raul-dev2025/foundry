@@ -16,10 +16,10 @@ Análisis del Caso de Prueba: ``mmap01``
 Análisis de Ejecución
 ---------------------
 
-1. **Configuración del Entorno (``setup``)**:
+1. **Configuración del Entorno** (``setup``):
    Se utiliza la macro ``SAFE_OPEN`` de LTP para crear un fichero temporal en un directorio aislado (``needs_tmpdir = 1``) y se ajusta su tamaño al de una página mediante ``ftruncate``.
 
-2. **Invocación de Syscall (``run``)**:
+2. **Invocación de Syscall** (``run``):
    Se invoca ``mmap()`` con los flags ``PROT_READ | PROT_WRITE`` y ``MAP_SHARED``.
 
 3. **Verificación**:
