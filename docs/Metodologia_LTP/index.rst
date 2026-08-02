@@ -29,4 +29,3 @@ Metodología para el estudio de "The Linux Test Project(LTP)"
 
    /Metodologia_LTP/BUS_teorica
    /Metodologia_LTP/BUS_tests
-
