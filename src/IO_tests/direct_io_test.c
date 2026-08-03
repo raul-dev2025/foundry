@@ -34,12 +34,19 @@ static void setup(void)
 		tst_brk(TBROK | TERRNO, "Error reservando buffer de lectura alineado");
 	}
 
-	/* Inicializar buffers con patrón de prueba */
+	/* Inicializar buffers con patron de prueba */
 	memset(wbuf, 'X', BUFFER_SIZE);
 	memset(rbuf, 0, BUFFER_SIZE);
 
-	/* 2. Apertura de archivo con la bandera O_DIRECT */
-	fd = SAFE_OPEN(TEST_FILE, O_RDWR | O_CREAT | O_TRUNC | O_DIRECT, 0644);
+	/* 2. Apertura con control de compatibilidad para O_DIRECT */
+	fd = open(TEST_FILE, O_RDWR | O_CREAT | O_TRUNC | O_DIRECT, 0644);
+	if (fd < 0) {
+		if (errno == EINVAL || errno == EOPNOTSUPP) {
+			tst_brk(TCONF | TERRNO, "El sistema de archivos no soporta O_DIRECT");
+		} else {
+			tst_brk(TBROK | TERRNO, "open() con O_DIRECT fallo inesperadamente");
+		}
+	}
 }
 
 static void cleanup(void)
@@ -69,7 +76,7 @@ static void run(void)
 
 	/* 2. Rebobinar cursor */
 	if (lseek(fd, 0, SEEK_SET) == (off_t)-1) {
-		tst_res(TBROK | TERRNO, "lseek() fallo al posicionar el offset");
+		tst_brk(TBROK | TERRNO, "lseek() fallo al posicionar el offset");
 		return;
 	}
 
