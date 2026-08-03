@@ -6,10 +6,13 @@ LDLIBS += -lltp
 
 .PHONY: all clean
 
-all: pci_config01
+all: pci_config01 pci_msi01
 
 pci_config01: pci_config_test.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $< $(LDLIBS) -o $@
 
+pci_msi01: pci_msi_test.c
+	$(CC) $(CFLAGS) $(LDFLAGS) $< $(LDLIBS) -o $@
+
 clean:
-	rm -f pci_config01 *.o
+	rm -f pci_config01 pci_msi01 *.o
