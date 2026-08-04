@@ -20,7 +20,7 @@ static void run(void)
 	struct dirent *entry;
 	char path[1024];
 	int fd, count = 0;
-  unsigned int *target_bdf "0000:08:00.1"
+  const char *target_bdf = "0000:08:00.1";
 	unsigned short vendor_id = 0, device_id = 0;
 
 	dir = opendir(SYSFS_PCI_DEV);
@@ -56,7 +56,7 @@ static void run(void)
 		close(fd);
 
 		/* Limitar el reporte detallado a los primeros dispositivos para no saturar los logs */
-		if(strstr(entry->d_name, target_bdf) == NULL && strcmp(entry->d_name, 08:00.1) != 0)
+		if(strstr(entry->d_name, target_bdf) == NULL && strcmp(entry->d_name, "08:00.1") != 0);
 	}
 
 	closedir(dir);
