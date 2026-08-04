@@ -2,11 +2,12 @@
 00:00.2 IOMMU
 00:01.0 Host bridge
 00:01.1 PCI bridge
-00:01.3 PCI bridge
+00:01.2 PCI bridge
 00:02.0 Host bridge
 00:03.0 Host bridge
 00:03.1 PCI bridge
 00:04.0 Host bridge
+00:05.0 Host bridge
 00:07.0 Host bridge
 00:07.1 PCI bridge
 00:08.0 Host bridge
@@ -25,20 +26,20 @@
 02:00.0 USB controller
 02:00.1 SATA controller
 02:00.2 PCI bridge
-03:00.0 PCI bridge
 03:02.0 PCI bridge
-03:03.0 PCI bridge
 03:04.0 PCI bridge
-04:00.0 USB controller
-05:00.0 Ethernet controller
+03:08.0 PCI bridge
+04:00.0 Ethernet controller
+05:00.0 Non-Volatile memory controller
 06:00.0 Ethernet controller
-08:00.0 VGA compatible controller
-08:00.1 Audio device
+07:00.0 VGA compatible controller
+07:00.1 Audio device
+08:00.0 Non-Essential Instrumentation [1300]
 09:00.0 Non-Essential Instrumentation [1300]
-09:00.2 Encryption controller
+09:00.1 Encryption controller
 09:00.3 USB controller
-0a:00.0 Non-Essential Instrumentation [1300]
-0a:00.2 SATA controller
+09:00.4 Audio device
+
 
 ############################################
 
