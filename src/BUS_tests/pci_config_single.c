@@ -35,6 +35,11 @@ static void run(void)
 		if (entry->d_name[0] == '.')
 			continue;
 
+		/*consulta un dispositivo*/
+		if(strstr(entry->d_name, target_bdf) == NULL) {
+      continue;
+    }
+
 		/* Construir ruta al archivo 'config' del dispositivo BDF */
 		snprintf(path, sizeof(path), "%s/%s/config", SYSFS_PCI_DEV, entry->d_name);
 
@@ -54,9 +59,7 @@ static void run(void)
 		}
 
 		close(fd);
-
-		/* Limitar el reporte detallado a los primeros dispositivos para no saturar los logs */
-		if(strstr(entry->d_name, target_bdf) == NULL && strcmp(entry->d_name, "08:00.1") != 0);
+    break;
 	}
 
 	closedir(dir);
