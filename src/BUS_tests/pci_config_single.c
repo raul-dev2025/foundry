@@ -20,7 +20,7 @@ static void run(void)
 	struct dirent *entry;
 	char path[1024];
 	int fd, count = 0;
-  const char *target_bdf = "0000:07:00.1";
+  const char *target_bdf = "0000:01:00.0";
 	unsigned short vendor_id = 0, device_id = 0;
 
 	dir = opendir(SYSFS_PCI_DEV);
