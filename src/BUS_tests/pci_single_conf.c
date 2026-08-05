@@ -2,7 +2,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
-#include "sysfs_paths.h"
+#include "../include/sysfs_paths.h"
 #include "tst_test.h"
 
 static const char *target_bdf = "0000:01:00.0";
