@@ -10,7 +10,7 @@ REMOTE_HOST="builder@buildlab"
 REMOTE_ROOT="/mnt/build-output/Repos/foundry"
 MODULE_SUBDIR="BUS_tests"                             # Módulo a probar
 REMOTE_SRC_DIR="${REMOTE_ROOT}/src/${MODULE_SUBDIR}"  # Directorio del Makefile modular
-REMOTE_BIN="${REMOTE_SRC_DIR}/pci_config02"                # Binario específico de LTP
+REMOTE_BIN="${REMOTE_SRC_DIR}/pci_config03"                # Binario específico de LTP
 
 # Rutas de logs (WS y Lab)
 LOCAL_LOG_DIR="/mnt/datos_raul/Logs/Buildlab/foundry"
@@ -33,7 +33,7 @@ echo "=============================================="
 # 2. Invocación de 'make clean && make' en el Lab
 #    Guarda en el log del Lab y transmite el contenido hacia la WS
 # Corrección en la línea 30 de ci-runner.sh
-if ssh "${REMOTE_HOST}" "{ make -C ${REMOTE_SRC_DIR} clean && make -C ${REMOTE_SRC_DIR} pci_config02; } > ${REMOTE_BUILD_LOG} 2>&1; cat ${REMOTE_BUILD_LOG}" > "${LOCAL_BUILD_LOG}" 2>&1; then
+if ssh "${REMOTE_HOST}" "{ make -C ${REMOTE_SRC_DIR} clean && make -C ${REMOTE_SRC_DIR} pci_config03; } > ${REMOTE_BUILD_LOG} 2>&1; cat ${REMOTE_BUILD_LOG}" > "${LOCAL_BUILD_LOG}" 2>&1; then
     echo "✅ BUILD SUCCESSFUL --> ${LOCAL_BUILD_LOG}"
 else
     echo "❌ BUILD FAILED -> Ver: ${LOCAL_BUILD_LOG}"
