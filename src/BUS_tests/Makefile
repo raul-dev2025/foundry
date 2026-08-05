@@ -20,5 +20,8 @@ pci_msi01: pci_msi_test.c
 pci_bar01: pci_bar_test.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $< $(LDLIBS) -o $@
 
+pci_config03: pci_single_conf.c
+	$(CC) $(CFLAGS) $(LDFLAGS) $< $(LDLIBS) -o $@
+
 clean:
-	rm -f pci_config01 pci_msi01 pci_bar01 *.o
+	rm -f pci_config01 pci_config02 pci_config03 pci_msi01 pci_bar01 *.o
