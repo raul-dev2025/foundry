@@ -36,3 +36,7 @@ Estructura del Repositorio
 * ``docs/``: Documentación técnica del laboratorio escrita en reStructuredText (rST).
 * ``fases/``: Guías de ejecución y scripts auxiliares por cada fase de despliegue.
 * ``scripts/``: Herramientas de automatización de entorno y pruebas.
+
+-----
+
+* Ver documentación `Foundry <https://github.com/raul-dev2025/raul-dev2025.github.io/blob/docs-integration/source/07_Development/Foundry/EntornoLTP/foundry.rst>`_
