@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "/lib/modules/*/build/include",
+                "/lib/modules/*/build/arch/x86/include",
+                "/lib/modules/*/build/arch/x86/include/generated",
+                "/lib/modules/*/build/include/uapi",
+                "/lib/modules/*/build/arch/x86/include/uapi"
+            ],
+            "defines": [
+                "__KERNEL__",
+                "MODULE",
+                "CONFIG_X86_64",
+                "KBUILD_MODNAME=\"hello\""
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
